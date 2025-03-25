@@ -7,9 +7,20 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
+/**
+ * User::create([
+    'name' => 'Usuario Prueba',
+    'email' => 'prueba@example.com',
+    'password' => bcrypt('password')
+     ]);     
+ */
+
 class User extends Authenticatable
 {
-    /** @use HasFactory<\Database\Factories\UserFactory> */
+    /** @use HasFactory<\Database\Factories\UserFactory>
+     *     
+     * 
+     */
     use HasFactory, Notifiable;
 
     /**

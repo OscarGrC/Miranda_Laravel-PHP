@@ -1,4 +1,4 @@
-<!-- resources/views/activities/create.blade.php -->
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -8,14 +8,6 @@
 </head>
 <body>
     <h1>Crear Actividad</h1>
-
-    <!-- Mostrar mensaje si todo sale bien -->
-    @if(session('success'))
-        <div style="color: green;">
-            {{ session('success') }}
-        </div>
-    @endif
-
     <!-- Formulario de creación -->
     <form action="{{ route('activities.store') }}" method="POST">
         @csrf

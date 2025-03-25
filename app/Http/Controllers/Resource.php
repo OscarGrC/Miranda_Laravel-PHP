@@ -23,21 +23,23 @@ class Resource extends Controller
 
     // Guardar una nueva actividad
     public function store(Request $request)
-    {
-    $paid = $request->has('paid') ? 1 : 0;
-    $validatedData = $request->validate([
+    {  
+          $validatedData = $request->validate([
         'type' => 'required|in:surf,windsurf,kayak,atv,hot air balloon',
         'user_id' => 'required|exists:users,id',
         'datetime' => 'required|date',
-        'paid' => 'required|boolean',
         'notes' => 'nullable|string',
         'satisfaction' => 'nullable|integer|min:0|max:10',
     ]);
 
-    
-    Activity::create(array_merge($validatedData, ['paid' => $paid]));
+    // Convertimos `paid` a booleano de forma segura
+    $validatedData['paid'] = $request->has('paid');
+
+    // Guardamos la actividad
+    Activity::create($validatedData);
+
     return redirect()->route('activities.index')->with('success', 'Actividad creada con éxito.');
-}
+    }
 
     
 
