@@ -47,13 +47,14 @@ class Resource extends Controller
     public function show($id)
     {
         $activity = Activity::findOrFail($id);
-        return response()->json($activity);
+        return view('activities.showById', compact('activity'));
     }
 
-    // Mostrar el formulario para editar una actividad (opcional en APIs)
+    // Mostrar el formulario para editar una actividad
     public function edit($id)
     {
-        return response()->json(['message' => "Formulario para editar actividad $id"], 200);
+        $activity = Activity::findOrFail($id); 
+        return view('activities.edit', compact('activity'));
     }
 
     // Actualizar una actividad
@@ -71,7 +72,7 @@ class Resource extends Controller
         $activity = Activity::findOrFail($id);
         $activity->update($validatedData);
 
-        return response()->json($activity);
+        return redirect()->route('activities.index')->with('success', 'Actividad Modificada con éxito.');
     }
 
     // Eliminar una actividad
