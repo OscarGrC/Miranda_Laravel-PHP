@@ -47,7 +47,7 @@ class ActivitiesController extends Controller
     public function show($id)
     {
         $activity = Activity::findOrFail($id);
-        return view('activities.showById', compact('activity'));
+        return view('activities.show', compact('activity'));
     }
 
     // Mostrar el formulario para editar una actividad

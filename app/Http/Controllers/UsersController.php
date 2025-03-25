@@ -44,7 +44,7 @@ class UsersController extends Controller
     public function show($id)
     {
         $user = User::findOrFail($id);
-        return view('users.showById', compact('user'));
+        return view('users.show', compact('user'));
     }
 
     // Mostrar el formulario para editar un usuario
