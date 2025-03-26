@@ -20,6 +20,9 @@ Route::middleware('auth')->group(function () {
 
     Route::resource('activities', ActivitiesController::class);
     Route::resource('users', UsersController::class);
+    Route::resource('rooms', RoomController::class);
+    Route::resource('bookings', BookingController::class);
+    Route::resource('contacts', ContactController::class);
 });
 
 require __DIR__.'/auth.php';
