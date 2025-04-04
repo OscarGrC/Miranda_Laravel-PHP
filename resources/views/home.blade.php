@@ -2,10 +2,12 @@
 <link rel="stylesheet" href="{{ asset('css/home.css') }}">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 <!--Scripts-->
-<script src="{{ asset('js/navbar.js') }}"></script>
-<script src="{{ asset('js/homeVideo.js') }}"></script>
-<script src="{{ asset('js/swiper.js') }}"></script>
-<script src="{{ asset('js/swiperCounter.js') }}"></script>
+@vite([
+    'resources/js/navbar.js',
+    'resources/js/homeVideo.js',
+    'resources/js/swiper.js',
+    'resources/js/swiperCounter.js'
+])
 @extends('layouts.app')  <!-- Este es el layout principal -->
 
 @section('content')
@@ -464,3 +466,4 @@
     </div>
     </div>
 @endsection
+

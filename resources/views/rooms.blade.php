@@ -1,9 +1,10 @@
 <!--Styls-->
 <link rel="stylesheet" href="{{ asset('css/rooms.css') }}">
 <!--Scripts-->
-<script src="{{ asset('js/navbar.js') }}"></script>
-<script src="{{ asset('js/roomsPagination.js') }}"></script>
-
+@vite([
+    'resources/js/navbar.js',
+    'resources/js/roomsPagination.js',
+])
 
 
 @extends('layouts.app')  <!-- Este es el layout principal -->
@@ -14,7 +15,7 @@
         <h3 class="luxuryExperience__subtitle">THE ULTIMATE LUXURY</h3>
         <h1 class="luxuryExperience__title">Ultimate Room</h1>
         <div class="luxuryExperience__footer">
-            <a class="luxuryExperience__footer__text" href="./home.html">Home |</a>
+            <a class="luxuryExperience__footer__text" href="{{ route('home') }}">Home |</a>
             <h2 class="luxuryExperience__footer__text">Rooms</h2>
         </div>
     </div>

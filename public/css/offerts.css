@@ -346,12 +346,47 @@
   color: #BEAD8E;
 }
 
+@media only screen and (min-width: 1000px) {
+  .luxuryExperience {
+    text-align: left;
+  }
+
+  .luxuryExperience__subtitle {
+    margin-top: 4rem;
+    margin-left: 20%;
+    max-width: 380px;
+  }
+
+  .luxuryExperience__title {
+    margin-left: 20%;
+    font-size: 5.5rem;
+    line-height: 4.75rem;
+    max-width: 630px;
+  }
+
+  .luxuryExperience__button-tour {
+    margin-left: 20%;
+    display: inline-block;
+  }
+
+  .luxuryExperience__button-learn {
+    margin-left: 1rem;
+    display: inline-block;
+  }
+}
+
 .ServicesList {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
   padding: 1rem;
+}
+
+@media only screen and (min-width: 1000px) {
+  .ServicesList {
+    display: inline-block;
+  }
 }
 
 .ServicesList__title {
@@ -518,6 +553,59 @@
   background-color: #c0a87d;
 }
 
+@media only screen and (min-width: 1000px) {
+  .OfferCard {
+    height: 46rem;
+    position: relative;
+  }
+
+  .OfferCard__imageContainer {
+    position: relative;
+  }
+
+  .OfferCard__imageContainer__image {
+    width: 57rem;
+    height: 21rem;
+  }
+
+  .OfferCard__price {
+    top: 22.5rem;
+    right: 4.5rem;
+    z-index: 3;
+  }
+
+  .OfferCard__price-last {
+    top: 20.5rem;
+    z-index: 3;
+  }
+
+  .OfferCard__textContainer {
+    background-color: white;
+    top: 21rem;
+    width: 50rem;
+    position: absolute;
+    z-index: 2;
+    padding-left: 1.5rem;
+    padding-top: 1.5rem;
+  }
+
+  .OfferCard__header {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .OfferCard__header__title {
+    max-width: 400px;
+    margin-bottom: 2rem;
+  }
+
+  .OfferCard__description {
+    max-width: 445px;
+    display: inline-flex;
+  }
+}
+
 .services {
   height: auto;
   width: auto;
@@ -525,6 +613,12 @@
 
 .servicesBlack {
   background-color: black;
+}
+
+@media only screen and (min-width: 1000px) {
+  .servicesBlack {
+    height: 44rem;
+  }
 }
 
 .swiper {
@@ -554,6 +648,13 @@
   height: 14.4rem;
 }
 
+@media only screen and (min-width: 1000px) {
+  .swiper__Counter .swiper-slide img {
+    width: 32rem;
+    height: 30rem;
+  }
+}
+
 .swiper__Counter .swiper-pagination-bullet-active {
   background: #BEAD8E;
 }
@@ -577,6 +678,13 @@
   object-fit: cover;
   width: 20.9rem;
   height: 20.9rem;
+}
+
+@media only screen and (min-width: 1000px) {
+  .swiper__HomeImage .swiper-slide img {
+    width: 31.9rem;
+    height: 22.9rem;
+  }
 }
 
 .swiper__HomeImage .swiper-pagination {
@@ -704,6 +812,35 @@
 
 .swiper__HomeRooms .swiper-button-next:after {
   font-size: 0.6rem;
+}
+
+@media only screen and (min-width: 1000px) {
+  .swiper__HomeRooms {
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    width: 40rem;
+    height: 40rem;
+  }
+
+  .swiper__HomeRooms .swiper-slide__subtitle-alt {
+    font-size: 1.3rem;
+  }
+
+  .swiper__HomeRooms .swiper-slide__title-alt {
+    margin-left: 58px;
+    max-width: 539px;
+  }
+
+  .swiper__HomeRooms .swiper-slide__titleAlt {
+    padding-top: 2rem;
+    font-family: "Old Standard TT", serif;
+    font-size: 1.875rem;
+    font-weight: 400;
+    line-height: 1.875rem;
+    color: #222222;
+    text-align: left;
+    padding-bottom: 0.5rem;
+  }
 }
 
 .swiper__Contact {
@@ -915,6 +1052,13 @@
   background: #BEAD8E;
 }
 
+@media only screen and (min-width: 1000px) {
+  .swiper {
+    width: 50.4rem;
+    height: 42rem;
+  }
+}
+
 .roomCard {
   width: 335px;
   background-color: #ffffff;
@@ -972,7 +1116,6 @@
   width: 1rem;
   height: 1rem;
   margin-right: 1rem;
-  display: inline-block;
 }
 
 .roomCard__title {
@@ -1032,6 +1175,69 @@
   color: #BDBDBD;
   display: inline;
   margin-left: 0.5rem;
+}
+
+@media only screen and (min-width: 1000px) {
+  .roomCard {
+    width: 500px;
+  }
+
+  .roomCard__image {
+    width: 500px !important;
+    height: 20rem;
+  }
+
+  .roomCard__image-homeRooms {
+    width: 375px;
+  }
+
+  .roomCard__icons {
+    top: 30px;
+    left: 16%;
+  }
+
+  .roomCard__icons-sliderHomeRooms {
+    top: -19px;
+    left: 16%;
+  }
+
+  .roomCard__icons__icon {
+    width: 1.5rem;
+    height: 1.5rem;
+  }
+
+  .roomCard__iconsB {
+    top: -19px;
+  }
+
+  .roomCard__title {
+    font-size: 2.5rem;
+  }
+
+  .roomCard__description {
+    max-width: 439px;
+  }
+
+  .roomCard__price-booking {
+    display: block;
+  }
+
+  .roomCard__price-booking__price-alt {
+    font-size: 3rem;
+  }
+
+  .roomCard__price-booking__price-alt2 {
+    font-size: 1.875rem;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .roomCardContainer {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+  }
 }
 
 .footer {
@@ -1212,6 +1418,50 @@
   color: #222222;
 }
 
+@media only screen and (min-width: 1000px) {
+  .footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto auto auto;
+    gap: 1rem;
+    align-items: start;
+  }
+
+  .footer__logo {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .footer__text {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .footer__social {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  .footer__services {
+    grid-column: 2;
+    grid-row: 1/4;
+  }
+
+  .footer__contact {
+    grid-column: 3;
+    grid-row: 1/3;
+  }
+
+  .footer__copyright {
+    grid-column: 1/4;
+    grid-row: 4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: start;
+  }
+}
+
 html,
 * {
   box-sizing: border-box;
@@ -1222,5 +1472,3 @@ html,
 body {
   min-width: 320px;
 }
-
-/*# sourceMappingURL=offerts.css.map */

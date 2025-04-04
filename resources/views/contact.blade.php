@@ -2,7 +2,9 @@
 <link rel="stylesheet" href="{{ asset('css/contact.css')}}">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 <!--Scripts-->
-<script src="{{ asset('js/navbar.js') }}"></script>
+@vite([
+    'resources/js/navbar.js',
+])
 
 @extends('layouts.app')  <!-- Este es el layout principal -->
 
@@ -14,7 +16,7 @@
         <h3 class="luxuryExperience__subtitle">THE ULTIMATE LUXURY</h3>
         <h1 class="luxuryExperience__title">New Details</h1>
         <div class="luxuryExperience__footer">
-            <a class="luxuryExperience__footer__text" href="./home.html">Home |</a>
+            <a class="luxuryExperience__footer__text" href="{{ route('home') }}">Home |</a>
             <h2 class="luxuryExperience__footer__text">Blog</h2>
         </div>
     </div>
